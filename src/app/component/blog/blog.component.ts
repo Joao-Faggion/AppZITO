@@ -31,7 +31,7 @@ export class BlogComponent implements OnInit {
 
   OpenPopUp(id: any, title: any, isedit = false) {
     this.dialog.open(AddBlogComponent, {
-      width: '40%',
+      width: '65%',
       data: {
         id: id,
         title: title,
