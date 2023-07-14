@@ -20,6 +20,7 @@ import { blogReducer } from './shared/store/BLOG/blog.reducer';
 import { appState } from './shared/store/GLOBAL/app.state';
 import { AddBlogComponent } from './component/add-blog/add-blog.component';
 import { EffectsModule } from '@ngrx/effects';
+import { FormComponent } from './component/form/form.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { EffectsModule } from '@ngrx/effects';
     ToolBarComponent,
     BlogComponent,
     ContadorComponent,
-    AddBlogComponent
+    AddBlogComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
