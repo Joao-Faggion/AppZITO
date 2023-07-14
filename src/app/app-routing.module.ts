@@ -4,6 +4,7 @@ import { HomeComponent } from './component/home/home.component';
 import { BlogComponent } from './component/blog/blog.component';
 import { ContadorComponent } from './component/contador/contador.component';
 import { authGuard } from './Guard/auth.guard';
+import { FormComponent } from './component/form/form.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'contador',
     component: ContadorComponent, canActivate:[authGuard]
+  },
+  {
+    path: 'formulario',
+    component: FormComponent
   }
 ];
 
