@@ -19,17 +19,17 @@ export class BlogComponent implements OnInit {
   blogList!: BlogModel[];
 
   ngOnInit(): void {
-      this.store.select(getBlog).subscribe(item =>{
-        this.blogList = item;
-        console.log(this.blogList);
-      })
+    this.store.select(getBlog).subscribe(item => {
+      this.blogList = item;
+      console.log(this.blogList);
+    })
   }
 
-  AddBlog(){
+  AddBlog() {
     this.OpenPopUp(0, 'Add Blog')
   }
 
-  OpenPopUp(id: any, title: any, isedit = false){
+  OpenPopUp(id: any, title: any, isedit = false) {
     this.dialog.open(AddBlogComponent, {
       width: '40%',
       data: {
@@ -40,16 +40,16 @@ export class BlogComponent implements OnInit {
     })
   }
 
-  EditBlog(id: any, title: any){
-    this.OpenPopUp(id, title, true);   
+  EditBlog(id: any, title: any) {
+    this.OpenPopUp(id, title, true);
   }
 
-  RemoveBlog(id: any, title: any){
-    if(confirm("Você tem certeza que deseja remover este item?")){
-      this.store.dispatch(deleteBlog({id:id}));
+  RemoveBlog(id: any, title: any) {
+    if (confirm("Você tem certeza que deseja remover este item?")) {
+      this.store.dispatch(deleteBlog({ id }));
     }
   }
 
- 
+
 
 }
