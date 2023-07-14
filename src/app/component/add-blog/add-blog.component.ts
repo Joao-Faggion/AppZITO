@@ -19,7 +19,11 @@ export class AddBlogComponent implements OnInit {
   editdata!: BlogModel;
 
   constructor(private dialogref: MatDialogRef<AddBlogComponent>, private builder: FormBuilder,
-    private store: Store<AppStateModel>, @Inject(MAT_DIALOG_DATA) public data: any) {
+    private store: Store<AppStateModel>, @Inject(MAT_DIALOG_DATA) public data: {
+      id: number,
+      title: string,
+      isedit: true
+    }) {
 
   }
 
@@ -27,7 +31,7 @@ export class AddBlogComponent implements OnInit {
     this.pagetitle = this.data.title;
     if (this.data.isedit) {
       this.editblogid = this.data.id;
-      this.store.select(getblogbyid(this.editblogid)).subscribe(_data => {
+      this.store.select(getblogbyid(this.editblogid)).subscribe(_data => {        
         this.editdata = _data;
         this.blogForm.setValue({id:this.editdata.id,title:this.editdata.title,description:this.editdata.description});
       });

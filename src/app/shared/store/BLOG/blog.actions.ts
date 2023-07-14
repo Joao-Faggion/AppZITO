@@ -6,3 +6,5 @@ export const loadBlog = createAction('loadblog');
 export const addBlog = createAction('addblog', props<{bloginput: BlogModel}>());
 
 export const updateBlog = createAction('updateblog', props<{bloginput: BlogModel}>());
+
+export const deleteBlog = createAction('deleteblog', props<{id: number}>());

@@ -16,9 +16,10 @@ import { HomeComponent } from './component/home/home.component';
 import { ToolBarComponent } from './component/tool-bar/tool-bar.component';
 import { BlogComponent } from './component/blog/blog.component';
 import { ContadorComponent } from './component/contador/contador.component';
-import { blogReducer } from './shared/store/BLOG/blof.reducer';
+import { blogReducer } from './shared/store/BLOG/blog.reducer';
 import { appState } from './shared/store/GLOBAL/app.state';
 import { AddBlogComponent } from './component/add-blog/add-blog.component';
+import { EffectsModule } from '@ngrx/effects';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { AddBlogComponent } from './component/add-blog/add-blog.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    StoreDevtoolsModule.instrument({ maxAge: false, logOnly: !isDevMode() })
+    StoreDevtoolsModule.instrument({ maxAge: false, logOnly: !isDevMode() }),
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,6 +5,7 @@ import { BlogModel } from 'src/app/shared/store/BLOG/blog.model';
 import { getBlog } from 'src/app/shared/store/BLOG/blog.selector';
 import { AppStateModel } from 'src/app/shared/store/GLOBAL/appstate.model';
 import { AddBlogComponent } from '../add-blog/add-blog.component';
+import { deleteBlog } from 'src/app/shared/store/BLOG/blog.actions';
 
 @Component({
   selector: 'app-blog',
@@ -39,8 +40,14 @@ export class BlogComponent implements OnInit {
     })
   }
 
-  EditBlog(id: any){
-    this.OpenPopUp(0, 'Edit Blog', true);   
+  EditBlog(id: any, title: any){
+    this.OpenPopUp(id, title, true);   
+  }
+
+  RemoveBlog(id: any, title: any){
+    if(confirm("Você tem certeza que deseja remover este item?")){
+      this.store.dispatch(deleteBlog({id:id}));
+    }
   }
 
  

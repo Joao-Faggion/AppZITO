@@ -1,12 +1,14 @@
 <div style="text-align: center;">
 <h1>Blog Tecnologia</h1>
-<button (click)="AddBlog()" mat-raised-button color="accent">Add Blog</button>
+<button (click)="AddBlog()" mat-raised-button color="primary">Add Blog</button>
 
 <mat-card *ngFor="let item of blogList">
     <mat-card-header>
         <h1>{{item.title}}</h1>
         <div>
-            <button (click)="EditBlog(item.id)" mat-raised-button color="warn">Edit</button>
+            <button (click)="EditBlog(item.id, item.title)" mat-raised-button color="primary"><mat-icon fontIcon="edit"></mat-icon></button>
+            <button (click)="RemoveBlog(item.id, item.title)" mat-raised-button color="warn"><mat-icon fontIcon="delete"></mat-icon></button>
+
         </div>
     </mat-card-header>
     <mat-card-content>
