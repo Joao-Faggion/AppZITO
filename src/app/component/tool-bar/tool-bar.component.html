@@ -1,9 +1,90 @@
 <mat-toolbar class="mat-elevation-z8" color="primary">
+    <button (click)="drawer.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>  
     <span>Treinando NGRX</span>
     <span class="span-spacer"></span>
-    <button mat-raised-button routerLink=""><mat-icon>home</mat-icon>HOME</button>
-    <button mat-raised-button routerLink="formulario"><mat-icon>person_add</mat-icon>Form</button>
-    <button mat-raised-button routerLink="usuarios"><mat-icon>person</mat-icon>User</button>
-    <button mat-raised-button routerLink="contador"><mat-icon>exposure</mat-icon>CONTADOR</button>
-    <button mat-raised-button routerLink="blog"><mat-icon>list_alt</mat-icon>BLOG</button>
+    <button mat-button routerLink=""><mat-icon>home</mat-icon>HOME</button>
+    <button mat-button routerLink="blog"><mat-icon>list_alt</mat-icon>BLOG</button>
 </mat-toolbar>
+
+
+<mat-drawer-container autosize style="z-index: 999;">
+    <mat-drawer #drawer opened="false" mode="side">
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button style="background: none;" routerLink=""><mat-icon>home</mat-icon>Home</button>
+            </mat-list-item>
+        </mat-nav-list>
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button style="background: none;" routerLink="formulario"><mat-icon>list</mat-icon>Formulário</button>
+            </mat-list-item>
+        </mat-nav-list>
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button style="background: none;" routerLink="usuarios"><mat-icon>person</mat-icon>Usuários</button>
+            </mat-list-item>
+        </mat-nav-list>
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button style="background: none;" routerLink="contador"><mat-icon>exposure</mat-icon>Contador</button>
+            </mat-list-item>
+        </mat-nav-list>
+        <mat-nav-list>
+            <mat-list-item>
+                <button mat-button style="background: none;" routerLink="blog"><mat-icon>list_alt</mat-icon>Blog</button>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+
+
+<mat-drawer-content>
+    <div style="text-align: center;height: 91.4vh;">
+
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-content>
+</mat-drawer-container>
+
+
+<!-- 
+<mat-drawer-container autosize>
+    <mat-drawer #drawer opened="true" mode="side">
+        <mat-nav-list>
+            <mat-list-item>
+                <button routerLink="" mat-button><mat-icon>home</mat-icon>Home</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button routerLink="formulario" mat-button><mat-icon>list</mat-icon>Formulário</button>
+            </mat-list-item>
+            <mat-list-item>
+                <button routerLink="blog" mat-button><mat-icon>dashboard</mat-icon>Blogs</button>
+            </mat-list-item>
+                
+                    <mat-list-item>
+                        <button routerLink="usuarios" mat-button><mat-icon>contacts</mat-icon>Usuários</button>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <button mat-button><mat-icon>settings</mat-icon>Settings</button>
+                    </mat-list-item>
+                    <mat-nav-list>
+                        <mat-list-item>
+                            <button mat-button><mat-icon>help</mat-icon>Help</button>
+                        </mat-list-item>
+                        <mat-nav-list>
+                            <mat-list-item>
+                                <button mat-button><mat-icon>analytics</mat-icon>Analytics</button>
+                            </mat-list-item>
+                        </mat-nav-list>
+                    </mat-nav-list>
+                </mat-nav-list>
+           
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="text-align: center;height: 91.4vh;">
+
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container> -->
