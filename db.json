@@ -1,17 +1,17 @@
 {
   "Blogs": [
     {
-      "id": 1, 
+      "id": 1,
       "title": "Angular",
       "description": "Angular is a open source powered by Google"
     },
     {
-      "id": 2, 
+      "id": 2,
       "title": "React",
       "description": "React is a open source powered by META"
     },
     {
-      "id": 3, 
+      "id": 3,
       "title": ".NET",
       "description": ".NET is a open source powered by Microsoft"
     },
@@ -21,9 +21,6 @@
       "description": "Java is a programing language and a plataform. JAVA is a high level, robust, object-oriented and secure programing language"
     }
   ],
-
-
-
   "usuarios": [
     {
       "id": 1,
@@ -274,7 +271,32 @@
       "complemento": "casas",
       "pais": "Brasil",
       "telefone": "748787974"
+    },
+    {
+      "nome": "dassd",
+      "sobrenome": "asdasd",
+      "datanasc": "2023-07-06T03:00:00.000Z",
+      "email": "dsadsadas",
+      "endereco": "dsaasd",
+      "senha": "123",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "12333123",
+      "genero": "Masculino",
+      "id": 4
+    },
+    {
+      "nome": "Ricardinho",
+      "sobrenome": "Mestre dos Magos",
+      "datanasc": "1997-01-02T02:00:00.000Z",
+      "email": "refiasidia@gamil.com",
+      "endereco": "Pato Branco",
+      "senha": "123",
+      "complemento": "apt 17",
+      "pais": "Brasil",
+      "telefone": "696969696",
+      "genero": "Masculino",
+      "id": 5
     }
   ]
- 
 }
