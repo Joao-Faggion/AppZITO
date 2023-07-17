@@ -5,6 +5,7 @@ import { BlogComponent } from './component/blog/blog.component';
 import { ContadorComponent } from './component/contador/contador.component';
 import { authGuard } from './Guard/auth.guard';
 import { FormComponent } from './component/form/form.component';
+import { UsuariosComponent } from './component/usuarios/usuarios.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'formulario',
     component: FormComponent
+  },
+  {
+    path: 'usuarios',
+    component: UsuariosComponent
   }
 ];
 

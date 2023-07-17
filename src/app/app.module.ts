@@ -21,6 +21,8 @@ import { appState } from './shared/store/GLOBAL/app.state';
 import { AddBlogComponent } from './component/add-blog/add-blog.component';
 import { EffectsModule } from '@ngrx/effects';
 import { FormComponent } from './component/form/form.component';
+import { UsuariosComponent } from './component/usuarios/usuarios.component';
+import { EditUsarioComponent } from './component/edit-usario/edit-usario.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { FormComponent } from './component/form/form.component';
     BlogComponent,
     ContadorComponent,
     AddBlogComponent,
-    FormComponent
+    FormComponent,
+    UsuariosComponent,
+    EditUsarioComponent
   ],
   imports: [
     BrowserModule,
