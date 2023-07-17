@@ -18,6 +18,10 @@ export class MasterService {
   getAllUsuarios(): Observable<Usuario[]>{
     return this.http.get<Usuario[]>("http://localhost:3000/usuarios");
   }
+  
+  SaveUsuario(data: any, id: any) {
+    return this.http.put('http://localhost:3000/usuarios'+id, data);
+  }
 
   getAllBlogs(): Observable<BlogModel[]>{
     return this.http.get<BlogModel[]>("http://localhost:3000/Blogs");

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { MasterService } from 'src/app/shared/master.service';
 
 @Component({
   selector: 'app-form',
@@ -10,7 +11,7 @@ export class FormComponent implements OnInit {
 
   pais =['Brasil', 'Australia', 'Argentina', 'Alemanha', 'Peru', 'Uruguai', 'Bolívia', 'Angola', 'Estados Unidos', 'Canadá', 'França', 'Espanha', 'Congo', 'Armênia'];
 
-  constructor(private builder: FormBuilder) { }
+  constructor(private builder: FormBuilder, private service: MasterService) { }
 
   ngOnInit(): void {
 
@@ -30,7 +31,10 @@ export class FormComponent implements OnInit {
   })
 
   SalvarUser(){
-    console.log(this.userForm.value)
+    console.log(this.userForm.value);
+    // this.service.SaveUsuario(this.userForm.value, this.userForm.id).subscribe(r => {
+    //  alert('Salvo com Sucesso!');
+    //  })
   }
 
   LimparForm(){

@@ -3,7 +3,9 @@
         <mat-form-field>
             <input matInput (keyup)="filterChange($event)" placeholder="Pesquisar">
         </mat-form-field>
-        <button mat-raised-button color="accent" style="margin-left: 75%;" (click)="EditUser()">Editar Usuario</button>
+        <button mat-raised-button color="primary" style="margin-left: 75%;" routerLink="/formulario"><mat-icon>person_add</mat-icon>Adicionar Usuário</button>
+        <button mat-raised-button color="accent"  (click)="EditUser()">Editar Usuario</button>
+        
     </mat-card-header>
 
     <mat-card-content>
