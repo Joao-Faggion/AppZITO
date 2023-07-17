@@ -1,0 +1,16 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Test User",
+      "sobrenome": "Testes",
+      "email": "asdasdasd",
+      "endereco": "ruauaua",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "4696969-0069",
+      "genero": "Masculino"
+    }
+  ]
+ 
+}
