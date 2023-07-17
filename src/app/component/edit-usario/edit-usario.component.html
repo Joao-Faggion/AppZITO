@@ -11,15 +11,6 @@
                 <label>Sobrenome</label>
                 <input matInput formControlName="sobrenome">
             </mat-form-field>
-
-            <mat-form-field class="mat-50">
-                <label>Data de Nascimento</label>
-                <input matInput [matDatepicker]="picker" formControlName="datanasc">
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-hint>*Formato está em Mês, Dia e Ano*</mat-hint>
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-
             
             <mat-form-field class="mat-50">
                 <label>País</label>
@@ -44,35 +35,26 @@
                 <input matInput formControlName="email">
             </mat-form-field>
 
-            <mat-form-field class="mat-50">
+            <mat-form-field>
                 <label>Telefone</label>
                 <input matInput formControlName="telefone">
             </mat-form-field>
 
             <mat-form-field class="mat-50">
-                <label>Senha</label>
-                <input matInput formControlName="senha" type="password">
+                <label>Senha Atual</label>
+                <input matInput formControlName="senha" type="current-password">
             </mat-form-field>
 
             <mat-form-field class="mat-50">
-                <label>Confirmar Senha</label>
-                <input matInput formControlName="senha" type="password">
+                <label>Nova Senha</label>
+                <input matInput formControlName="novasenha" type="new-password">
             </mat-form-field>
 
-            <div>
-
-                <mat-radio-group color="primary" formControlName="genero">
-                    <mat-radio-button value="Masculino">Masculino</mat-radio-button>
-                    <mat-radio-button value="Feminino">Feminino</mat-radio-button>
-                    <mat-radio-button value="Outros">Prefiro não informar</mat-radio-button>
-                </mat-radio-group> 
-
-            </div>
 
             <mat-card-footer>
                 <div style="text-align: right; margin: 2%;">
                     <button mat-raised-button color="primary">Salvar Usuário</button>
-                    <button mat-raised-button color="warn" (click)="LimparForm()">Limpar Informações</button>
+                    <button mat-raised-button color="warn" (click)="ClosePopUp()">Fechar Editor</button>
                 </div>
             </mat-card-footer>
 
