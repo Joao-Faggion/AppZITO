@@ -1,4 +1,29 @@
 {
+  "Blogs": [
+    {
+      "id": 1, 
+      "title": "Angular",
+      "description": "Angular is a open source powered by Google"
+    },
+    {
+      "id": 2, 
+      "title": "React",
+      "description": "React is a open source powered by META"
+    },
+    {
+      "id": 3, 
+      "title": ".NET",
+      "description": ".NET is a open source powered by Microsoft"
+    },
+    {
+      "id": 4,
+      "title": "Java",
+      "description": "Java is a programing language and a plataform. JAVA is a high level, robust, object-oriented and secure programing language"
+    }
+  ],
+
+
+
   "usuarios": [
     {
       "id": 1,
@@ -8,8 +33,247 @@
       "endereco": "ruauaua",
       "complemento": "casas",
       "pais": "Brasil",
-      "telefone": "4696969-0069",
-      "genero": "Masculino"
+      "telefone": "4696969-0069"
+    },
+    {
+      "id": 2,
+      "nome": "Taz",
+      "sobrenome": "Mania",
+      "email": "wuadauel@gmail.com",
+      "endereco": "AHgasdad",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "0000000000"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
+    },
+    {
+      "id": 3,
+      "nome": "Zé",
+      "sobrenome": "Ruela",
+      "email": "zeruela@!dasasd",
+      "endereco": "sdasadfsa",
+      "complemento": "casas",
+      "pais": "Brasil",
+      "telefone": "748787974"
     }
   ]
  

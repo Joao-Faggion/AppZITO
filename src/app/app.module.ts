@@ -23,6 +23,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { FormComponent } from './component/form/form.component';
 import { UsuariosComponent } from './component/usuarios/usuarios.component';
 import { EditUsarioComponent } from './component/edit-usario/edit-usario.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BlogEffects } from './shared/store/BLOG/blog.effects';
 
 
 @NgModule({
@@ -48,8 +50,10 @@ import { EditUsarioComponent } from './component/edit-usario/edit-usario.compone
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     StoreDevtoolsModule.instrument({ maxAge: false, logOnly: !isDevMode() }),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([BlogEffects]),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
