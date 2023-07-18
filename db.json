@@ -86,19 +86,6 @@
       "telefone": "1",
       "genero": "Masculino",
       "id": 10
-    },
-    {
-      "nome": "sdsasad",
-      "sobrenome": "sadasd",
-      "datanasc": "2023-07-11T03:00:00.000Z",
-      "email": "asdasda",
-      "endereco": "dsadas",
-      "senha": "12312",
-      "complemento": "adsasd",
-      "pais": "Argentina",
-      "telefone": "123123",
-      "genero": "Masculino",
-      "id": 11
     }
   ]
 }

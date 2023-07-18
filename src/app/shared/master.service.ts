@@ -16,7 +16,7 @@ export class MasterService {
   }
 
   editUsuario(id: number, data: any): Observable<any> {
-    return this.http.get(`http://localhost:3000/usuarios/${id}`, data);
+    return this.http.post(`http://localhost:3000/usuarios/${id}`, data);
   }
 
   getAllUsuarios(): Observable<Usuario[]> {
