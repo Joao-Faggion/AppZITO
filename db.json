@@ -116,6 +116,19 @@
       "telefone": "46988345549",
       "genero": "Masculino",
       "id": 8
+    },
+    {
+      "nome": "adfsdasd",
+      "sobrenome": "dsaasdasd",
+      "datanasc": "2023-07-07T03:00:00.000Z",
+      "email": "sadQFEF@gasd.com",
+      "endereco": "asdad",
+      "senha": "213",
+      "complemento": "caas",
+      "pais": "Australia",
+      "telefone": "46991150027",
+      "genero": "Masculino",
+      "id": 9
     }
   ]
 }

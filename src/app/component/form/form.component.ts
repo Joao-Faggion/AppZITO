@@ -35,7 +35,7 @@ export class FormComponent implements OnInit {
     if(this.userForm.valid){
       this.service.SaveUsuario(this.userForm.value).subscribe({
         next: (val: any) => {
-          alert('Usuário Salvado com Sucesso');
+          alert('Usuário adicionado com Sucesso!');
         },
         error: (err: any) => {
           console.error(err)
