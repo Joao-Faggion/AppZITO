@@ -23,62 +23,6 @@
   ],
   "usuarios": [
     {
-      "id": 1,
-      "nome": "Test User",
-      "sobrenome": "Testes",
-      "email": "asdasdasd",
-      "endereco": "ruauaua",
-      "complemento": "casas",
-      "pais": "Brasil",
-      "telefone": "4696969-0069"
-    },
-    {
-      "id": 2,
-      "nome": "Taz",
-      "sobrenome": "Mania",
-      "email": "wuadauel@gmail.com",
-      "endereco": "AHgasdad",
-      "complemento": "casas",
-      "pais": "Brasil",
-      "telefone": "0000000000"
-    },
-    {
-      "id": 3,
-      "nome": "Zé",
-      "sobrenome": "Ruela",
-      "email": "zeruela@!dasasd",
-      "endereco": "sdasadfsa",
-      "complemento": "casas",
-      "pais": "Brasil",
-      "telefone": "748787974"
-    },
-    {
-      "nome": "dassd",
-      "sobrenome": "asdasd",
-      "datanasc": "2023-07-06T03:00:00.000Z",
-      "email": "dsadsadas",
-      "endereco": "dsaasd",
-      "senha": "123",
-      "complemento": "casas",
-      "pais": "Brasil",
-      "telefone": "12333123",
-      "genero": "Masculino",
-      "id": 4
-    },
-    {
-      "nome": "Ricardinho",
-      "sobrenome": "Mestre dos Magos",
-      "datanasc": "1997-01-02T02:00:00.000Z",
-      "email": "refiasidia@gamil.com",
-      "endereco": "Pato Branco",
-      "senha": "123",
-      "complemento": "apt 17",
-      "pais": "Brasil",
-      "telefone": "696969696",
-      "genero": "Masculino",
-      "id": 5
-    },
-    {
       "nome": "João Victor",
       "sobrenome": "Faggion",
       "datanasc": "2003-11-10T02:00:00.000Z",
@@ -89,20 +33,7 @@
       "pais": "Brasil",
       "telefone": "(46) 9 9115-0027",
       "genero": "Masculino",
-      "id": 6
-    },
-    {
-      "nome": "Joao",
-      "sobrenome": "Teste'",
-      "datanasc": "2003-11-10T02:00:00.000Z",
-      "email": "testes@testes.testes",
-      "endereco": "Rua 345",
-      "senha": "123",
-      "complemento": "casa 346",
-      "pais": "Armênia",
-      "telefone": "69696969",
-      "genero": "Masculino",
-      "id": 7
+      "id": 3
     },
     {
       "nome": "para",
@@ -115,20 +46,59 @@
       "pais": "Brasil",
       "telefone": "46988345549",
       "genero": "Masculino",
-      "id": 8
+      "id": 5
     },
     {
-      "nome": "adfsdasd",
-      "sobrenome": "dsaasdasd",
-      "datanasc": "2023-07-07T03:00:00.000Z",
-      "email": "sadQFEF@gasd.com",
-      "endereco": "asdad",
-      "senha": "213",
-      "complemento": "caas",
-      "pais": "Australia",
-      "telefone": "46991150027",
+      "nome": "sad",
+      "sobrenome": "sad",
+      "datanasc": "2023-07-05T03:00:00.000Z",
+      "email": "sad",
+      "endereco": "dsa",
+      "senha": "21",
+      "complemento": "dsa",
+      "pais": "Argentina",
+      "telefone": "12",
       "genero": "Masculino",
-      "id": 9
+      "id": 6
+    },
+    {
+      "nome": "ewqeqwe",
+      "sobrenome": "qeqweqweqwe",
+      "datanasc": "2023-07-13T03:00:00.000Z",
+      "email": "daadasda",
+      "endereco": "312123",
+      "senha": "3213123",
+      "complemento": "ewdqqew",
+      "pais": "Australia",
+      "telefone": "31231231",
+      "genero": "Masculino",
+      "id": 7
+    },
+    {
+      "nome": "a",
+      "sobrenome": "a",
+      "datanasc": "2023-07-01T03:00:00.000Z",
+      "email": "a",
+      "endereco": "a",
+      "senha": "1",
+      "complemento": "a",
+      "pais": "Brasil",
+      "telefone": "1",
+      "genero": "Masculino",
+      "id": 10
+    },
+    {
+      "nome": "sdsasad",
+      "sobrenome": "sadasd",
+      "datanasc": "2023-07-11T03:00:00.000Z",
+      "email": "asdasda",
+      "endereco": "dsadas",
+      "senha": "12312",
+      "complemento": "adsasd",
+      "pais": "Argentina",
+      "telefone": "123123",
+      "genero": "Masculino",
+      "id": 11
     }
   ]
 }

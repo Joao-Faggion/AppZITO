@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Usuario } from 'src/app/Interface/IUsuarios';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { FormComponent } from '../form/form.component';
 
 @Component({
   selector: 'app-usuarios',
@@ -14,9 +15,10 @@ import { MatSort } from '@angular/material/sort';
 })
 export class UsuariosComponent implements OnInit {
 
+  // id!: Usuario[];
   usuarioList!: any;
   dataSource: any;
-  displayedColumns: string[] = ["nome", "sobrenome", "pais", "endereco", "complemento", "email", "telefone"];
+  displayedColumns: string[] = ["nome", "sobrenome", "pais", "endereco", "complemento", "email", "telefone", "excluir"];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -36,6 +38,7 @@ export class UsuariosComponent implements OnInit {
       this.dataSource.sort = this.sort;
     })
   }
+  
 
   filterChange(data: Event){
     const value = (data.target as HTMLInputElement).value;
@@ -43,13 +46,31 @@ export class UsuariosComponent implements OnInit {
   }
 
   EditUser() {
-    this.OpenPopUp();
-  }
-
-  OpenPopUp() {
-    this.dialog.open(EditUsarioComponent, {
-      width: '65%',
+    const dialogref = this.dialog.open(EditUsarioComponent);
+    dialogref.afterClosed().subscribe({
+      next: (val) => {
+        if(val){
+          this.loadUsuario()
+        }
+      }
     })
   }
+
+  DeletarUsuario(id: number){
+    this.service.DeletarUsuario(id).subscribe({
+      next: (res) => {
+        alert('Usuário deletado com sucesso!');
+        window.location.reload();
+    },
+    error: console.log
+    })
+
+  }
+
+  // OpenPopUp() {
+  //   this.dialog.open(EditUsarioComponent, {
+  //     width: '65%',
+  //   })
+  // }
 
 }

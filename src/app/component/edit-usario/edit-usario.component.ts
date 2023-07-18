@@ -1,6 +1,7 @@
-import { Component,Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MasterService } from 'src/app/shared/master.service';
 
 @Component({
   selector: 'app-edit-usario',
@@ -9,9 +10,11 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class EditUsarioComponent implements OnInit {
 
-  pais =['Brasil', 'Australia', 'Argentina', 'Alemanha', 'Peru', 'Uruguai', 'Bolívia', 'Angola', 'Estados Unidos', 'Canadá', 'França', 'Espanha', 'Congo', 'Armênia'];
+  id!: number;
 
-  constructor(private builder: FormBuilder, private dialog: MatDialogRef<EditUsarioComponent>, @Inject(MAT_DIALOG_DATA) public data: any) { 
+  pais = ['Brasil', 'Australia', 'Argentina', 'Alemanha', 'Peru', 'Uruguai', 'Bolívia', 'Angola', 'Estados Unidos', 'Canadá', 'França', 'Espanha', 'Congo', 'Armênia'];
+
+  constructor(private builder: FormBuilder, private dialog: MatDialogRef<EditUsarioComponent>, @Inject(MAT_DIALOG_DATA) public data: any, private service: MasterService) {
 
   }
 
@@ -27,18 +30,27 @@ export class EditUsarioComponent implements OnInit {
     novasenha: this.builder.control('', Validators.required)
   });
 
-  SalvarUser(){
-    console.log(this.userForm.value);
-  }
+  EditarUsuario(id: number, data: any) {
+        this.service.editUsuario(id, data).subscribe({
+          next: (val: any) => {
+            alert('Usário alterado com sucesso!')
+            this.dialog.close(true);
+          },
+          error: (err: any) => {
+            console.error(err);
+          },
+        });
+      }
+    
 
-  ClosePopUp(){
-    this.dialog.close();
-  }
+      ClosePopUp(){
+        this.dialog.close();
+      }
 
-  ngOnInit(): void {
-  //   this.userForm.setValue({
-  //     nome: 'João Faggion', sobrenome: 'Faggion',email: 'joafaggion2003@gmail.com', pais: 'Brasil', telefone: '46991150027'})
-  // }
+      ngOnInit(): void {
+        //   this.userForm.setValue({
+        //     nome: 'João Faggion', sobrenome: 'Faggion',email: 'joafaggion2003@gmail.com', pais: 'Brasil', telefone: '46991150027'})
+        // }
 
-}
-}
+      }
+    }

@@ -11,19 +11,27 @@ export class MasterService {
 
   constructor(private http: HttpClient) { }
 
-  haveAccess(){
+  haveAccess() {
     return true;
   }
 
-  getAllUsuarios(): Observable<Usuario[]>{
+  editUsuario(id: number, data: any): Observable<any> {
+    return this.http.get(`http://localhost:3000/usuarios/${id}`, data);
+  }
+
+  getAllUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>("http://localhost:3000/usuarios");
   }
-  
-  SaveUsuario(data: any): Observable<any>{
+
+  SaveUsuario(data: any): Observable<any> {
     return this.http.post('http://localhost:3000/usuarios', data);
   }
 
-  getAllBlogs(): Observable<BlogModel[]>{
+  DeletarUsuario(id: number): Observable<any> {
+    return this.http.delete(`http://localhost:3000/usuarios/${id}`);
+  }
+
+  getAllBlogs(): Observable<BlogModel[]> {
     return this.http.get<BlogModel[]>("http://localhost:3000/Blogs");
   }
 

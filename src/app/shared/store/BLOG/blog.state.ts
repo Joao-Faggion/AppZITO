@@ -3,11 +3,11 @@ import { Blogs } from "./blog.model";
 
 export const blogState: Blogs = {
     blogList: [
-       {
-        id:1,
-        title:'Angular',
-        description:'Angular is a open source powered by Google'
-       },
+    //    {
+    //     id:1,
+    //     title:'Angular',
+    //     description:'Angular is a open source powered by Google'
+    //    },
     // {
     //     id:2,
     //     title:'REACT',

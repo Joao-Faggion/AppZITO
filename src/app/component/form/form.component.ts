@@ -32,17 +32,18 @@ export class FormComponent implements OnInit {
 
   SalvarUser(){
     console.log(this.userForm.value);
-    if(this.userForm.valid){
+      if(this.userForm.valid){
       this.service.SaveUsuario(this.userForm.value).subscribe({
         next: (val: any) => {
           alert('Usuário adicionado com Sucesso!');
+          window.location.reload();
         },
         error: (err: any) => {
           console.error(err)
         }
       })
   }
-}
+  }
 
   LimparForm(){
     this.userForm.reset();
