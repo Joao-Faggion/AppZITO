@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { MasterService } from "../../master.service";
-import { LOAD_BLOG, addBlog, addBlogSuccess, deleteBlog, deleteBlogSuccess, loadBlogFail, loadBlogSuccess, updateBlog, updateBlogSuccess } from "./blog.actions";
+import { LOAD_BLOG, addBlog, addBlogSuccess, deleteBlog, deleteBlogSuccess, loadBlogFail, loadBlogSuccess, updateBlog, updateBlogSuccess, updateUsuario, updateUsuarioSuccess } from "./blog.actions";
 import { EMPTY, catchError, exhaustMap, map, of, switchMap } from "rxjs";
 import { BlogModel } from "./blog.model";
 import { MatSnackBar } from "@angular/material/snack-bar";
@@ -56,6 +56,20 @@ export class BlogEffects {
                 ))
         )
     );
+
+    _updateUsuario = createEffect(() =>
+    this.action$.pipe(
+        ofType(updateUsuario),
+        switchMap(action =>
+            this.service.updateUsuario(action.usuarioInput).pipe(
+                switchMap(res => of(
+                    updateUsuarioSuccess({ usuarioInput: action.usuarioInput }),
+                    showAlert({ message: 'Blog Alterado Com Sucesso', actionResult: 'pass' })
+                )),
+                catchError((_error) => of(showAlert({ message: 'Não foi possível pois' + _error.message, actionResult: 'Fail' })))
+            ))
+    )
+);
 
     _deleteBlog = createEffect(() =>
         this.action$.pipe(

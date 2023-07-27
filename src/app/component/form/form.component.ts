@@ -31,7 +31,6 @@ export class FormComponent implements OnInit {
   })
 
   SalvarUser(){
-    console.log(this.userForm.value);
       if(this.userForm.valid){
       this.service.saveUsuario(this.userForm.value).subscribe({
         next: (val: any) => {

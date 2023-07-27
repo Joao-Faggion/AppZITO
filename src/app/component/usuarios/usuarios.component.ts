@@ -15,7 +15,7 @@ import { FormComponent } from '../form/form.component';
 })
 export class UsuariosComponent implements OnInit {
 
-  // id!: Usuario[];
+   Usuario!: Usuario;
   usuarioList!: any;
   dataSource: any;
   displayedColumns: string[] = ["nome", "sobrenome", "pais", "endereco", "complemento", "email", "telefone", "excluir"];
@@ -46,7 +46,10 @@ export class UsuariosComponent implements OnInit {
   }
 
   EditUser() {
-    const dialogref = this.dialog.open(EditUsarioComponent);
+    const dialogref = this.dialog.open(EditUsarioComponent, {
+      width: '65%',
+      
+    });
   }
 
   DeletarUsuario(id: number){

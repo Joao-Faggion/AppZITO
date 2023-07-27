@@ -32,7 +32,7 @@ export class MasterService {
   }
 
   updateUsuario(data: any) {
-    return this.http.put("http://localhost:3000/Blogs/", data)
+    return this.http.put("http://localhost:3000/usuarios/", data)
   }
 
   getAllBlogs(): Observable<BlogModel[]> {
