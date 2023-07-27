@@ -30,16 +30,20 @@ export class EditUsarioComponent implements OnInit {
     novasenha: this.builder.control('', Validators.required)
   });
 
-  EditarUsuario(id: number, data: any) {
-        this.service.editUsuario(id, data).subscribe({
-          next: (val: any) => {
-            alert('Usário alterado com sucesso!')
-            this.dialog.close(true);
-          },
-          error: (err: any) => {
-            console.error(err);
-          },
-        });
+      EditarUsuario() {
+        if(this.userForm.valid){
+          this.service.updateUsuario(this.userForm.value).subscribe({
+            next: (val: any) => {
+              alert('Usuário adicionado com Sucesso!');
+              window.location.reload();
+            },
+            error: (err: any) => {
+              console.error(err)
+            }
+        })
+        }
+
+    
       }
     
 

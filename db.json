@@ -1,39 +1,29 @@
 {
   "Blogs": [
     {
-      "id": 1,
-      "title": "Angular",
-      "description": "Angular is a open source powered by Google"
-    },
-    {
       "id": 2,
       "title": "React",
-      "description": "React is a open source powered by META"
+      "description": "React is React"
     },
     {
       "id": 3,
       "title": ".NET",
-      "description": ".NET is a open source powered by Microsoft"
+      "description": ".NET is a open source ptg"
     },
     {
       "id": 4,
       "title": "Java",
-      "description": "Java is a programing language and a plataform. JAVA is a high level, robust, object-oriented and secure programing language"
+      "description": "Java is a programing language and a plataform. JAVA is a high level, robust, object-oriented and secure programing language......"
     },
     {
       "id": 5,
-      "title": "Tazzzzzzz",
+      "title": "Tazzzzzz",
       "description": "wuaudsduael"
     },
     {
       "id": 6,
-      "title": "wasdasdasdas",
-      "description": "dsadasdasdasdasdad"
-    },
-    {
-      "id": 7,
-      "title": "dassdas",
-      "description": "fdjsahdfjhdfauhdsufhdsua dfshsdfhudsfhdsf fdsidsfhasdhfudshffd dsfhudshfdsufdfs dsfjafdushdsuhfdsuiaf vsadsasddasygdyasdgyasgduasd basdghsaydgasydgasyudgaysgdyasgdyuag sdadsyuasy dgdsahgysagdyasd basygdyuadasd sdasdadasdasdasas asdadasdadaskldsknfdsah dsalfjkdsfjidsfj dsofosdjifguhfgasdmdmsf udfajidjfausdhf dsjfushfudsf fdsjfsdfsdhfjsdn ksdfpskdf"
+      "title": "El Barto",
+      "description": "AYYYY CARAMBA"
     }
   ],
   "usuarios": [
@@ -64,43 +54,43 @@
       "id": 5
     },
     {
-      "nome": "ewqeqwe",
-      "sobrenome": "qeqweqweqwe",
-      "datanasc": "2023-07-13T03:00:00.000Z",
-      "email": "daadasda",
-      "endereco": "312123",
-      "senha": "3213123",
-      "complemento": "ewdqqew",
-      "pais": "Australia",
-      "telefone": "31231231",
+      "nome": "Taz",
+      "sobrenome": "Mania",
+      "datanasc": "1991-11-10T02:00:00.000Z",
+      "email": "tazinhoz1k4@yahoo.com.br",
+      "endereco": "WUADAUEL",
+      "senha": "123",
+      "complemento": "UUAUGSGUASEW",
+      "pais": "Estados Unidos",
+      "telefone": "(46) 9 0069-6900",
+      "genero": "Masculino",
+      "id": 6
+    },
+    {
+      "nome": "El",
+      "sobrenome": "Barto",
+      "datanasc": "1960-08-23T03:00:00.000Z",
+      "email": "elbarto@gmail.com",
+      "endereco": "Ay Caramba",
+      "senha": "123",
+      "complemento": "AYAY",
+      "pais": "Estados Unidos",
+      "telefone": "(46) 9 0000-00666",
       "genero": "Masculino",
       "id": 7
     },
     {
-      "nome": "dasdasd",
-      "sobrenome": "dasasdasd",
+      "nome": "aaaaa",
+      "sobrenome": "sssssssss",
       "datanasc": "2023-07-05T03:00:00.000Z",
-      "email": "sdaasdas",
-      "endereco": "dasda",
-      "senha": "12312312",
-      "complemento": "sdasdasd",
-      "pais": "Argentina",
-      "telefone": "12312",
-      "genero": "Masculino",
-      "id": 11
-    },
-    {
-      "nome": "sadasdasda",
-      "sobrenome": "sdsadasdasdasda",
-      "datanasc": "2023-07-12T03:00:00.000Z",
-      "email": "asdasdas@gmiaol.com",
-      "endereco": "sda",
+      "email": "sdasd",
+      "endereco": "dasdas",
       "senha": "123",
-      "complemento": "ads",
+      "complemento": "asdasda",
       "pais": "Australia",
-      "telefone": "43232432423",
+      "telefone": "123123",
       "genero": "Masculino",
-      "id": 12
+      "id": 8
     }
   ]
 }

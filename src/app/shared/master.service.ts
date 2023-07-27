@@ -31,6 +31,10 @@ export class MasterService {
     return this.http.delete(`http://localhost:3000/usuarios/${id}`);
   }
 
+  updateUsuario(data: any) {
+    return this.http.put("http://localhost:3000/Blogs/", data)
+  }
+
   getAllBlogs(): Observable<BlogModel[]> {
     return this.http.get<BlogModel[]>("http://localhost:3000/Blogs");
   }
