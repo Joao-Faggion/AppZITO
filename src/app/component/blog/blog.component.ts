@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
-import { BlogModel } from 'src/app/shared/store/BLOG/blog.model';
-import { getBlog } from 'src/app/shared/store/BLOG/blog.selector';
+import { BlogModel, Blogs } from 'src/app/shared/store/BLOG/blog.model';
+import { getBlog, getBlogInfo } from 'src/app/shared/store/BLOG/blog.selector';
 import { AppStateModel } from 'src/app/shared/store/GLOBAL/appstate.model';
 import { AddBlogComponent } from '../add-blog/add-blog.component';
 import { deleteBlog, loadBlog } from 'src/app/shared/store/BLOG/blog.actions';
@@ -17,12 +17,12 @@ export class BlogComponent implements OnInit {
   constructor(private store: Store<AppStateModel>, private dialog: MatDialog) { }
 
   blogList!: BlogModel[];
+  blogInfo!: Blogs;
 
   ngOnInit(): void {
     this.store.dispatch(loadBlog());
-    this.store.select(getBlog).subscribe(item => {
-      this.blogList = item;
-      console.log(this.blogList);
+    this.store.select(getBlogInfo).subscribe(item => {
+      this.blogInfo = item;
     })
   }
 
@@ -48,6 +48,7 @@ export class BlogComponent implements OnInit {
   RemoveBlog(id: any, title: any) {
     if (confirm("Você tem certeza que deseja remover este item?")) {
       this.store.dispatch(deleteBlog({ id }));
+      window.location.reload();
     }
   }
 

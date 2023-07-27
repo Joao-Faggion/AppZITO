@@ -7,4 +7,5 @@ export interface BlogModel {
 
 export interface Blogs { 
     blogList: BlogModel[];
+    errorMessage: string,
 }

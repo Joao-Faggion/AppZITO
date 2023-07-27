@@ -1,6 +1,6 @@
 import { createReducer, on } from "@ngrx/store";
 import { blogState } from "./blog.state";
-import { addBlog, deleteBlog, loadBlog, loadBlogSuccess, updateBlog } from "./blog.actions";
+import { addBlog, addBlogSuccess, deleteBlog, loadBlog, loadBlogFail, loadBlogSuccess, updateBlog, updateBlogSuccess } from "./blog.actions";
 import { BlogModel } from "./blog.model";
 
 const _blogReducer = createReducer(blogState,
@@ -12,7 +12,15 @@ const _blogReducer = createReducer(blogState,
     on(loadBlogSuccess, (state, action) => {
         return {
             ...state,
-            blogList: [...action.bloglist]
+            blogList: [...action.bloglist],
+            errorMessage: ''
+        }
+    }),
+    on(loadBlogFail, (state, action) => {
+        return {
+            ...state,
+            blogList: [],
+            errorMessage:action.errorText
         }
     }),
     on(addBlog, (state, action) => {
@@ -23,7 +31,14 @@ const _blogReducer = createReducer(blogState,
             blogList: [...state.blogList, _blog]
         }
     }),
-    on(updateBlog, (state, action) => {
+    on(addBlogSuccess, (state, action) => {
+        const _blog = { ...action.bloginput }
+        return {
+            ...state,
+            blogList: [...state.blogList, _blog]
+        }
+    }),
+    on(updateBlogSuccess, (state, action) => {
         const _blog = { ...action.bloginput }
         const updatedBlog = state.blogList.map(blog => {
             return _blog.id === blog.id ? _blog : blog;

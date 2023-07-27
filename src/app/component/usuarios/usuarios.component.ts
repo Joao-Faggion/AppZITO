@@ -47,17 +47,10 @@ export class UsuariosComponent implements OnInit {
 
   EditUser() {
     const dialogref = this.dialog.open(EditUsarioComponent);
-    dialogref.afterClosed().subscribe({
-      next: (val) => {
-        if(val){
-          this.loadUsuario()
-        }
-      }
-    })
   }
 
   DeletarUsuario(id: number){
-    this.service.DeletarUsuario(id).subscribe({
+    this.service.deletarUsuario(id).subscribe({
       next: (res) => {
         alert('Usuário deletado com sucesso!');
         window.location.reload();
