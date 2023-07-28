@@ -1,6 +1,14 @@
 .mat-mdc-card-header{
     align-items: center;
-    margin-left: 40%;
+    display: flex;
+    text-align: center;
+}
+
+h1{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
 }
 
 p{
