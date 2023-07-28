@@ -48,7 +48,7 @@ export class BlogComponent implements OnInit {
   RemoveBlog(id: any, title: any) {
     if (confirm("Você tem certeza que deseja remover este item?")) {
       this.store.dispatch(deleteBlog({ id }));
-      window.location.reload();
+      // window.location.reload();
     }
   }
 

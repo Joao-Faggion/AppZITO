@@ -22,7 +22,6 @@ import { AddBlogComponent } from './component/add-blog/add-blog.component';
 import { EffectsModule } from '@ngrx/effects';
 import { FormComponent } from './component/form/form.component';
 import { UsuariosComponent } from './component/usuarios/usuarios.component';
-import { EditUsarioComponent } from './component/edit-usario/edit-usario.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogEffects } from './shared/store/BLOG/blog.effects';
 
@@ -40,7 +39,6 @@ import { BlogEffects } from './shared/store/BLOG/blog.effects';
     AddBlogComponent,
     FormComponent,
     UsuariosComponent,
-    EditUsarioComponent
   ],
   imports: [
     BrowserModule,

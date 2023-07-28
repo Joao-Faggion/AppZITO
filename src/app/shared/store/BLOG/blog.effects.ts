@@ -57,20 +57,6 @@ export class BlogEffects {
         )
     );
 
-    _updateUsuario = createEffect(() =>
-    this.action$.pipe(
-        ofType(updateUsuario),
-        switchMap(action =>
-            this.service.updateUsuario(action.usuarioInput).pipe(
-                switchMap(res => of(
-                    updateUsuarioSuccess({ usuarioInput: action.usuarioInput }),
-                    showAlert({ message: 'Blog Alterado Com Sucesso', actionResult: 'pass' })
-                )),
-                catchError((_error) => of(showAlert({ message: 'Não foi possível pois' + _error.message, actionResult: 'Fail' })))
-            ))
-    )
-);
-
     _deleteBlog = createEffect(() =>
         this.action$.pipe(
             ofType(deleteBlog),
@@ -108,14 +94,14 @@ export class BlogEffects {
         })
     }
 
-    // showSnackBarAlert(message: string, actionResult: string) {
-    //     let _class = actionResult == 'pass' ? 'green-snackbar' : 'red-snackbar'
-    //     console.log(_class)
-    //     return this.snackBar.open(message, 'OK', {
-    //         verticalPosition: 'top',
-    //         horizontalPosition: 'end',
-    //         panelClass: [_class]
-    //     });
-    // }
+    showSnackBarAlert(message: string, actionResult: string) {
+        let _class = actionResult == 'pass' ? 'green-snackbar' : 'red-snackbar'
+        console.log(_class)
+        return this.snackBar.open(message, 'OK', {
+            verticalPosition: 'top',
+            horizontalPosition: 'end',
+            panelClass: [_class]
+        });
+    }
 
 }

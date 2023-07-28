@@ -15,10 +15,6 @@ export class MasterService {
     return true;
   }
 
-  editUsuario(id: number, data: any): Observable<any> {
-    return this.http.post(`http://localhost:3000/usuarios/${id}`, data);
-  }
-
   getAllUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>("http://localhost:3000/usuarios");
   }
@@ -29,10 +25,6 @@ export class MasterService {
 
   deletarUsuario(id: number): Observable<any> {
     return this.http.delete(`http://localhost:3000/usuarios/${id}`);
-  }
-
-  updateUsuario(data: any) {
-    return this.http.put("http://localhost:3000/usuarios/", data)
   }
 
   getAllBlogs(): Observable<BlogModel[]> {

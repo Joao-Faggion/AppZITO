@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { EditUsarioComponent } from '../edit-usario/edit-usario.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MasterService } from 'src/app/shared/master.service';
 import { MatTableDataSource } from '@angular/material/table';
@@ -7,6 +6,7 @@ import { Usuario } from 'src/app/Interface/IUsuarios';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { FormComponent } from '../form/form.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-usuarios',
@@ -45,13 +45,6 @@ export class UsuariosComponent implements OnInit {
     this.dataSource.filter = value;
   }
 
-  EditUser() {
-    const dialogref = this.dialog.open(EditUsarioComponent, {
-      width: '65%',
-      
-    });
-  }
-
   DeletarUsuario(id: number){
     this.service.deletarUsuario(id).subscribe({
       next: (res) => {
@@ -62,11 +55,5 @@ export class UsuariosComponent implements OnInit {
     })
 
   }
-
-  // OpenPopUp() {
-  //   this.dialog.open(EditUsarioComponent, {
-  //     width: '65%',
-  //   })
-  // }
 
 }

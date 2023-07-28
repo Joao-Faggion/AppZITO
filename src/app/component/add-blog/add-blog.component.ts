@@ -61,7 +61,7 @@ export class AddBlogComponent implements OnInit {
       }else{
       this.store.dispatch(addBlog({ bloginput: _bloginput }))
       }
-      window.location.reload();
+      // window.location.reload();
       this.ClosePopUp();
     }
   }
