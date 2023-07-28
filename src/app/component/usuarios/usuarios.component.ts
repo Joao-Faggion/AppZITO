@@ -46,6 +46,7 @@ export class UsuariosComponent implements OnInit {
   }
 
   DeletarUsuario(id: number){
+    if (confirm("Você tem certeza que deseja excluir este usuário? Não será possível recuperar este usuário!")) {
     this.service.deletarUsuario(id).subscribe({
       next: (res) => {
         alert('Usuário deletado com sucesso!');
@@ -56,4 +57,5 @@ export class UsuariosComponent implements OnInit {
 
   }
 
+}
 }

@@ -1,34 +1,4 @@
 {
-  "Blogs": [
-    {
-      "id": 1,
-      "title": "Primeiro",
-      "description": "Deu certo"
-    },
-    {
-      "id": 2,
-      "title": "Segundo",
-      "description": "Taz Mania"
-    },
-    {
-      "id": 3,
-      "title": "Terceiro",
-      "description": "Terceiroo"
-    }
-  ],
-  "usuarios": [
-    {
-      "nome": "Primeiro",
-      "sobrenome": "Testando",
-      "datanasc": "2016-12-08T02:00:00.000Z",
-      "email": "asdhashdhasdhashd",
-      "endereco": "Rua Sei LA",
-      "senha": "123",
-      "complemento": "Não sei",
-      "pais": "Brasil",
-      "telefone": "46991150027",
-      "genero": "Masculino",
-      "id": 1
-    }
-  ]
+  "Blogs": [],
+  "usuarios": []
 }
