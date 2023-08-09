@@ -2,9 +2,18 @@
   "Blogs": [
     {
       "id": 1,
-      "title": "12",
-      "description": "12"
+      "title": "brogao",
+      "description": "BROGRAOAOs"
     }
   ],
-  "usuarios": []
+  "usuarios": [
+    {
+      "nome": "O pai de todos",
+      "sobrenome": "PPPPPPPAi",
+      "email": "opaidetodos.yahoo.com.br",
+      "pais": "Peru",
+      "telefone": "4699990666",
+      "id": 1
+    }
+  ]
 }

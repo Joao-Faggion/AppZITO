@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogEffects } from './shared/store/BLOG/blog.effects';
 import { NgToastModule } from 'ng-angular-popup';
 import { NgConfirmModule } from 'ng-confirm-box';
+import { DetalhesUsuariosComponent } from './component/detalhes-usuarios/detalhes-usuarios.component';
 
 
 
@@ -43,6 +44,7 @@ import { NgConfirmModule } from 'ng-confirm-box';
     AddBlogComponent,
     FormComponent,
     UsuariosComponent,
+    DetalhesUsuariosComponent,
 
   ],
   imports: [

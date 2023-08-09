@@ -1,0 +1,48 @@
+<mat-card class="example-card text-center">
+    <mat-card-header class="justify-content-center">
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{detalhesUsuario.nome}} {{detalhesUsuario.sobrenome}}</mat-card-title>
+        <mat-card-subtitle>{{detalhesUsuario.email}}</mat-card-subtitle>
+</mat-card-header>
+
+
+
+
+<mat-card-content>
+    <mat-list>
+        <mat-list-item>
+            <div matLine>
+                Número do Usuário: 
+                <button mat-button>{{detalhesUsuario.id}}</button>
+            </div>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item>
+            <div matLine>
+                Número de Telefone: 
+                <button mat-button>{{detalhesUsuario.telefone}}</button>
+            </div>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item>
+            <div matLine>
+                Email: 
+                <button mat-button>{{detalhesUsuario.email}}</button>
+            </div>
+        </mat-list-item>
+    </mat-list>
+    <mat-list>
+        <mat-list-item>
+            <div matLine>
+                País: 
+                <button mat-button>{{detalhesUsuario.pais}}</button>
+            </div>
+        </mat-list-item>
+    </mat-list>
+</mat-card-content>
+
+<div>
+    <button mat-raised-button color="accent" routerLink="/usuarios">Voltar para Tabela de Usuários</button>
+</div>

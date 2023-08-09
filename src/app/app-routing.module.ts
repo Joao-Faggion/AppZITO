@@ -6,6 +6,7 @@ import { ContadorComponent } from './component/contador/contador.component';
 import { authGuard } from './Guard/auth.guard';
 import { FormComponent } from './component/form/form.component';
 import { UsuariosComponent } from './component/usuarios/usuarios.component';
+import { DetalhesUsuariosComponent } from './component/detalhes-usuarios/detalhes-usuarios.component';
 
 const routes: Routes = [
   {
@@ -28,10 +29,10 @@ const routes: Routes = [
     path: 'usuarios',
     component: UsuariosComponent
   },
-  // {
-  //   path: 'detalhes/:id',
-  //   component: DetalheUsuarioComponent
-  // },
+  {
+    path: 'detalhes/:id',
+    component: DetalhesUsuariosComponent
+  },
   {
     path: 'atualizar/:id',
     component: FormComponent
