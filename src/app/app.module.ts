@@ -24,6 +24,9 @@ import { FormComponent } from './component/form/form.component';
 import { UsuariosComponent } from './component/usuarios/usuarios.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogEffects } from './shared/store/BLOG/blog.effects';
+import { NgToastModule } from 'ng-angular-popup';
+import { NgConfirmModule } from 'ng-confirm-box';
+
 
 
 
@@ -40,6 +43,7 @@ import { BlogEffects } from './shared/store/BLOG/blog.effects';
     AddBlogComponent,
     FormComponent,
     UsuariosComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,8 @@ import { BlogEffects } from './shared/store/BLOG/blog.effects';
     HttpClientModule,
     StoreDevtoolsModule.instrument({ maxAge: false, logOnly: !isDevMode() }),
     EffectsModule.forRoot([BlogEffects]),
-
+    NgToastModule,
+    NgConfirmModule
   ],
   providers: [],
   bootstrap: [AppComponent]

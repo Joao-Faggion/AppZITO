@@ -6,6 +6,8 @@ import { getBlog, getBlogInfo } from 'src/app/shared/store/BLOG/blog.selector';
 import { AppStateModel } from 'src/app/shared/store/GLOBAL/appstate.model';
 import { AddBlogComponent } from '../add-blog/add-blog.component';
 import { deleteBlog, loadBlog } from 'src/app/shared/store/BLOG/blog.actions';
+import { NgToastService } from 'ng-angular-popup';
+import { NgConfirmService } from 'ng-confirm-box';
 
 @Component({
   selector: 'app-blog',
@@ -14,7 +16,7 @@ import { deleteBlog, loadBlog } from 'src/app/shared/store/BLOG/blog.actions';
 })
 export class BlogComponent implements OnInit {
 
-  constructor(private store: Store<AppStateModel>, private dialog: MatDialog) { }
+  constructor(private store: Store<AppStateModel>, private dialog: MatDialog, private toastService: NgToastService, private confirm: NgConfirmService) { }
 
   blogList!: BlogModel[];
   blogInfo!: Blogs;
@@ -46,11 +48,29 @@ export class BlogComponent implements OnInit {
   }
 
   RemoveBlog(id: any, title: any) {
-    if (confirm("Você tem certeza que deseja remover este item?")) {
-      this.store.dispatch(deleteBlog({ id }));
-      // window.location.reload();
+
+    try {
+      this.confirm.showConfirm(`Você quer deletar este Blog?`, () => {
+        this.store.dispatch(deleteBlog({ id }));
+        this.toastService.success({ detail: "SUCESSO", summary: "Blog Deletado", duration: 2000 });
+      },
+        () => {
+
+        }
+      )
+    }
+
+    catch (e) {
+
+      console.log(e)
+
     }
   }
 
-  
 }
+
+
+  // if (confirm("Você tem certeza que deseja remover este item?")) {
+  //   this.store.dispatch(deleteBlog({ id }));
+  //   // window.location.reload();
+  // }

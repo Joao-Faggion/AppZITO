@@ -1,4 +1,4 @@
-<form [formGroup]="userForm" (ngSubmit)="SalvarUser()">
+<form [formGroup]="userForm">
     <mat-card>
         <mat-card-content>
 
@@ -11,67 +11,28 @@
                 <label>Sobrenome</label>
                 <input matInput formControlName="sobrenome">
             </mat-form-field>
-
-            <mat-form-field class="mat-50">
-                <label>Data de Nascimento</label>
-                <input matInput [matDatepicker]="picker" formControlName="datanasc">
-                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-             
-                <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-
             
             <mat-form-field class="mat-50">
                 <label>País</label>
                 <mat-select formControlName="pais">
                     <mat-option [value]="item" *ngFor="let item of pais">{{item}}</mat-option>
                 </mat-select>
-                <!-- <input matInput -->
             </mat-form-field>
-
-            <mat-form-field class="mat-50">
-                <label>Endereço</label>
-                <input matInput formControlName="endereco">
-            </mat-form-field>
-
-            <mat-form-field class="mat-50">
-                <label>Complemento</label>
-                <input matInput formControlName="complemento">
-            </mat-form-field>
-
-            <mat-form-field class="mat-50">
-                <label>Email</label>
-                <input matInput formControlName="email">
-            </mat-form-field>
-
+            
             <mat-form-field class="mat-50">
                 <label>Telefone</label>
                 <input matInput formControlName="telefone">
             </mat-form-field>
 
-            <mat-form-field class="mat-50">
-                <label>Senha</label>
-                <input matInput formControlName="senha" type="password">
+            <mat-form-field>
+                <label>Email</label>
+                <input matInput formControlName="email">
             </mat-form-field>
-
-            <mat-form-field class="mat-50">
-                <label>Confirmar Senha</label>
-                <input matInput formControlName="senha" type="password">
-            </mat-form-field>
-
-            <div>
-
-                <mat-radio-group color="primary" formControlName="genero">
-                    <mat-radio-button value="Masculino">Masculino</mat-radio-button>
-                    <mat-radio-button value="Feminino">Feminino</mat-radio-button>
-                    <mat-radio-button value="Outros">Prefiro não informar</mat-radio-button>
-                </mat-radio-group> 
-
-            </div>
 
             <mat-card-footer>
                 <div style="text-align: right; margin: 2%;">
-                    <button mat-raised-button color="primary">Salvar Usuário</button>
+                    <button mat-raised-button color="primary" type="submit" *ngIf="!isUpdateActive" (click)="SalvarUser()">Salvar Usuário</button>
+                    <button mat-raised-button color="primary" type="submit" *ngIf="isUpdateActive" (click)="atualizar()" color="primary">Atualizar</button>
                     <button mat-raised-button color="warn" (click)="LimparForm()">Limpar Informações</button>
                 </div>
             </mat-card-footer>
@@ -79,3 +40,4 @@
         </mat-card-content>
     </mat-card>
 </form>
+

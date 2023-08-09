@@ -15,6 +15,14 @@ export class MasterService {
     return true;
   }
 
+  updateUsuario(id: number, data: any): Observable<Usuario[]> {
+    return this.http.put<Usuario[]>(`http://localhost:3000/usuarios/${id}`, data)
+  }
+
+  getUsuarioById(id: number): Observable<Usuario> {
+    return this.http.get<Usuario>(`http://localhost:3000/usuarios/${id}`)
+  }
+
   getAllUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>("http://localhost:3000/usuarios");
   }

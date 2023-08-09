@@ -2,6 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Store } from '@ngrx/store';
+import { NgToastService } from 'ng-angular-popup';
+import { NgConfirmService } from 'ng-confirm-box';
 import { addBlog, updateBlog } from 'src/app/shared/store/BLOG/blog.actions';
 import { BlogModel } from 'src/app/shared/store/BLOG/blog.model';
 import { getblogbyid } from 'src/app/shared/store/BLOG/blog.selector';
@@ -23,7 +25,7 @@ export class AddBlogComponent implements OnInit {
       id: number,
       title: string,
       isedit: true
-    }) {
+    }, private toastService: NgToastService, private confirm: NgConfirmService) {
 
   }
 

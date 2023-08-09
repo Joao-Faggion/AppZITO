@@ -27,7 +27,15 @@ const routes: Routes = [
   {
     path: 'usuarios',
     component: UsuariosComponent
-  }
+  },
+  // {
+  //   path: 'detalhes/:id',
+  //   component: DetalheUsuarioComponent
+  // },
+  {
+    path: 'atualizar/:id',
+    component: FormComponent
+  },
 ];
 
 @NgModule({

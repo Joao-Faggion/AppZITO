@@ -6,7 +6,10 @@ import { Usuario } from 'src/app/Interface/IUsuarios';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { FormComponent } from '../form/form.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { NgToastService } from 'ng-angular-popup';
+import { NgConfirmService } from 'ng-confirm-box';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -15,22 +18,26 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class UsuariosComponent implements OnInit {
 
-   Usuario!: Usuario;
+  Usuario!: Usuario;
   usuarioList!: any;
   dataSource: any;
-  displayedColumns: string[] = ["nome", "sobrenome", "pais", "endereco", "complemento", "email", "telefone", "excluir"];
+  displayedColumns: string[] = ["nome", "sobrenome", "pais", "email", "telefone", "excluir"];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private dialog: MatDialog, private service: MasterService) {
+  constructor(private dialog: MatDialog,private router: Router , private service: MasterService, private toastService: NgToastService, private confirm: NgConfirmService) {
     this.loadUsuario();
   }
 
   ngOnInit(): void {
-      
+
   }
 
-  loadUsuario(){
+  edit(id: number) {
+    this.router.navigate(['atualizar', id]);
+  }
+
+  loadUsuario() {
     this.service.getAllUsuarios().subscribe(res => {
       this.usuarioList = res;
       this.dataSource = new MatTableDataSource<Usuario>(this.usuarioList);
@@ -38,24 +45,36 @@ export class UsuariosComponent implements OnInit {
       this.dataSource.sort = this.sort;
     })
   }
-  
 
-  filterChange(data: Event){
+
+  filterChange(data: Event) {
     const value = (data.target as HTMLInputElement).value;
     this.dataSource.filter = value;
   }
 
-  DeletarUsuario(id: number){
-    if (confirm("Você tem certeza que deseja excluir este usuário? Não será possível recuperar este usuário!")) {
-    this.service.deletarUsuario(id).subscribe({
-      next: (res) => {
-        alert('Usuário deletado com sucesso!');
-        window.location.reload();
-    },
-    error: console.log
-    })
+  DeletarUsuario(id: number) {
+
+    try {
+      this.confirm.showConfirm(`Você quer deletar esse usuário?`, () => {
+        this.service.deletarUsuario(id).subscribe(res => {
+          this.toastService.success({ detail: "SUCESSO", summary: "Usuário Deletado", duration: 2000 });
+          this.service.getAllUsuarios;
+        })
+      },
+        () => {
+
+        })
+
+    }
+    catch (e) {
+      console.log(e)
+    }
+    finally {
+      setTimeout(() => {
+        window.location.reload()
+      }, 2002)
+    }
+
 
   }
-
-}
 }
