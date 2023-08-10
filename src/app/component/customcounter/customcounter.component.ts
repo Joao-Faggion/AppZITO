@@ -1,6 +1,13 @@
+//ANGULAR
 import { Component, OnInit } from '@angular/core';
+
+//NGRX
 import { Store } from '@ngrx/store';
+
+//RXJS
 import { Subscription } from "rxjs";
+
+//SHARED COUNTER
 import { customincrement } from 'src/app/shared/store/counter.actions';
 import { CounterModel } from 'src/app/shared/store/counter.model';
 import { getchannelname } from 'src/app/shared/store/counter.selector';

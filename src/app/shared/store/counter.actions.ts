@@ -1,5 +1,7 @@
+//NGRX
 import { createAction, props } from "@ngrx/store";
 
+//COUNTER ACTIONS
 export const increment = createAction("increcent")
 export const decrement = createAction("decrement")
 export const reset = createAction("reset")

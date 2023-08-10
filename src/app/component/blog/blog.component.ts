@@ -1,11 +1,26 @@
+//ANGULAR
 import { Component, OnInit } from '@angular/core';
+
+//MATERIAL
 import { MatDialog } from '@angular/material/dialog';
+
+//NGRX
 import { Store } from '@ngrx/store';
+
+//INTERFACE
+import { AppStateModel } from 'src/app/shared/store/GLOBAL/appstate.model';
+
+//SHARED BLOG
 import { BlogModel, Blogs } from 'src/app/shared/store/BLOG/blog.model';
 import { getBlog, getBlogInfo } from 'src/app/shared/store/BLOG/blog.selector';
-import { AppStateModel } from 'src/app/shared/store/GLOBAL/appstate.model';
+
+//COMPONENT
 import { AddBlogComponent } from '../add-blog/add-blog.component';
+
+//BLOG ACTIONS
 import { deleteBlog, loadBlog } from 'src/app/shared/store/BLOG/blog.actions';
+
+//API´s
 import { NgToastService } from 'ng-angular-popup';
 import { NgConfirmService } from 'ng-confirm-box';
 
@@ -16,10 +31,15 @@ import { NgConfirmService } from 'ng-confirm-box';
 })
 export class BlogComponent implements OnInit {
 
-  constructor(private store: Store<AppStateModel>, private dialog: MatDialog, private toastService: NgToastService, private confirm: NgConfirmService) { }
-
   blogList!: BlogModel[];
   blogInfo!: Blogs;
+
+  constructor(    private store: Store<AppStateModel>, 
+                  private dialog: MatDialog, 
+                  private toastService: NgToastService, 
+                  private confirm: NgConfirmService   ) { }
+
+                  
 
   ngOnInit(): void {
     this.store.dispatch(loadBlog());
@@ -68,9 +88,3 @@ export class BlogComponent implements OnInit {
   }
 
 }
-
-
-  // if (confirm("Você tem certeza que deseja remover este item?")) {
-  //   this.store.dispatch(deleteBlog({ id }));
-  //   // window.location.reload();
-  // }

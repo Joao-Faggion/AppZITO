@@ -1,6 +1,13 @@
+//ANGULAR
 import { Component } from '@angular/core';
+
+//NGRX
 import { Store } from '@ngrx/store';
+
+//COUNTER ACTIONS
 import { changechannelname, decrement, increment, reset } from 'src/app/shared/store/counter.actions';
+
+//INTERFACE
 import { CounterModel } from 'src/app/shared/store/counter.model';
 
 @Component({

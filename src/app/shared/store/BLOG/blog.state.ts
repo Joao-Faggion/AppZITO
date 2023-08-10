@@ -1,3 +1,4 @@
+//INTERFACE
 import { Blogs } from "./blog.model";
 
 

@@ -1,4 +1,7 @@
+//NGRX
 import { createFeatureSelector, createSelector } from "@ngrx/store";
+
+//INTERFACES
 import { BlogModel, Blogs } from "./blog.model";
 
 const getblogstate = createFeatureSelector<Blogs>('blog');

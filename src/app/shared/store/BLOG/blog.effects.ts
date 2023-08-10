@@ -1,11 +1,23 @@
 import { Injectable } from "@angular/core";
+
+//NGRX
 import { Actions, createEffect, ofType } from "@ngrx/effects";
-import { MasterService } from "../../master.service";
-import { LOAD_BLOG, addBlog, addBlogSuccess, deleteBlog, deleteBlogSuccess, loadBlogFail, loadBlogSuccess, updateBlog, updateBlogSuccess, updateUsuario, updateUsuarioSuccess } from "./blog.actions";
 import { EMPTY, catchError, exhaustMap, map, of, switchMap } from "rxjs";
-import { BlogModel } from "./blog.model";
+
+//API
+import { MasterService } from "../../master.service";
+
+//MATERIAL
 import { MatSnackBar } from "@angular/material/snack-bar";
+
+//GLOBAL ACTIONS
 import { emptyAction, showAlert } from "../GLOBAL/app.actions";
+
+//BLOG ACTIONS
+import { LOAD_BLOG, addBlog, addBlogSuccess, deleteBlog, deleteBlogSuccess, loadBlogFail, loadBlogSuccess, updateBlog, updateBlogSuccess, updateUsuario, updateUsuarioSuccess } from "./blog.actions";
+
+//BLOG INTERFACE
+import { BlogModel } from "./blog.model";
 
 @Injectable()
 

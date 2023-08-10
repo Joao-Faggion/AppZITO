@@ -1,6 +1,13 @@
+//NGRX
 import { createReducer, on } from "@ngrx/store";
+
+//BLOG STATE
 import { blogState } from "./blog.state";
+
+//BLOG ACTIONS
 import { addBlog, addBlogSuccess, deleteBlog, loadBlog, loadBlogFail, loadBlogSuccess, updateBlog, updateBlogSuccess } from "./blog.actions";
+
+//INTERFACE
 import { BlogModel } from "./blog.model";
 
 const _blogReducer = createReducer(blogState,

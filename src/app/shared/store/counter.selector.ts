@@ -1,4 +1,7 @@
+//NGRX
 import { createFeatureSelector, createSelector } from "@ngrx/store";
+
+//INTERFACE
 import { CounterModel } from "./counter.model";
 
 const getcounterstate = createFeatureSelector<CounterModel>('counter');

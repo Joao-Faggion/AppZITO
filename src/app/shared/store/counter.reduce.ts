@@ -1,5 +1,10 @@
+//NGRX
 import { createReducer, on } from "@ngrx/store";
+
+//COUNTER ACTIONS
 import {changechannelname, customincrement, decrement, increment, reset} from "./counter.actions";
+
+//COUNTER STATE
 import { initialState } from "./counter.state";
 
 

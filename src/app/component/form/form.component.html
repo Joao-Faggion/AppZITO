@@ -2,37 +2,48 @@
     <mat-card>
         <mat-card-content>
 
-            <mat-form-field class="mat-50">
-                <label>Nome</label>
-                <input matInput formControlName="nome">
+            <mat-form-field appearance="fill" class="mat-50">
+                <mat-label>Nome</mat-label>
+                <input matInput [ngClass]="{'is-invalid': userForm.controls['nome'].errors?.['minlength'] }" type="text"
+                    class="form-control-nome" type="text"formControlName="nome">
+                    <mat-error *ngIf="userForm.controls['nome'].touched">Insira o Nome</mat-error>
             </mat-form-field>
 
-            <mat-form-field class="mat-50">
-                <label>Sobrenome</label>
-                <input matInput formControlName="sobrenome">
+            <mat-form-field appearance="fill" class="mat-50">
+                <mat-label>Sobrenome</mat-label>
+                <input matInput [ngClass]="{'is-invalid': userForm.controls['sobrenome'].errors?.['minlength'] }" type="text" class="form-control-sobrenome" type="text"formControlName="sobrenome">
+                <mat-error *ngIf="userForm.controls['sobrenome'].touched">Insira o Sobrenome</mat-error>
             </mat-form-field>
-            
-            <mat-form-field class="mat-50">
-                <label>País</label>
+
+            <mat-form-field appearance="fill" class="mat-50">
+                <mat-label>País</mat-label>
                 <mat-select formControlName="pais">
                     <mat-option [value]="item" *ngFor="let item of pais">{{item}}</mat-option>
                 </mat-select>
-            </mat-form-field>
-            
-            <mat-form-field class="mat-50">
-                <label>Telefone</label>
-                <input matInput formControlName="telefone">
+                <mat-error *ngIf="userForm.controls['pais'].touched">Insira o País</mat-error>
             </mat-form-field>
 
-            <mat-form-field>
-                <label>Email</label>
-                <input matInput formControlName="email">
+            <mat-form-field appearance="fill" class="mat-50">
+                <mat-label>Telefone</mat-label>
+                <input matInput [ngClass]="{'is-invalid': userForm.controls['telefone'].errors?.['numValid'] }" type="text" class="form-control-telefone" type="text"formControlName="telefone">
+                <mat-error *ngIf="userForm.controls['telefone'].touched">Insira o Telefone com o DDD, somente o número</mat-error>
             </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput [ngClass]="{'is-invalid': userForm.controls['email'].errors?.['emailValid'] }" type="text"
+                class="form-control-email" type="text" formControlName="email">
+                <mat-error *ngIf="userForm.controls['email'].touched">Insira o Email</mat-error>
+            </mat-form-field>
+
+            <div ngClass="alert" *ngIf="userForm.controls['nome'].errors?.['nameUsable'] ">*Apenas letras</div>
 
             <mat-card-footer>
                 <div style="text-align: right; margin: 2%;">
-                    <button mat-raised-button color="primary" type="submit" *ngIf="!isUpdateActive" (click)="SalvarUser()">Salvar Usuário</button>
-                    <button mat-raised-button color="primary" type="submit" *ngIf="isUpdateActive" (click)="atualizar()" color="primary">Atualizar</button>
+                    <button mat-raised-button color="primary" [disabled]="!userForm.valid" type="submit"
+                        *ngIf="!isUpdateActive" (click)="SalvarUser()">Salvar Usuário</button>
+                    <button mat-raised-button color="primary" [disabled]="!userForm.valid" type="submit"
+                        *ngIf="isUpdateActive" (click)="atualizar()" color="primary">Atualizar</button>
                     <button mat-raised-button color="warn" (click)="LimparForm()">Limpar Informações</button>
                 </div>
             </mat-card-footer>
@@ -40,4 +51,3 @@
         </mat-card-content>
     </mat-card>
 </form>
-

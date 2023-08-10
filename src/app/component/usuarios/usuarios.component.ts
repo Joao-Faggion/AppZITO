@@ -1,15 +1,20 @@
+//ANGULAR
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { MasterService } from 'src/app/shared/master.service';
-import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
+
+//INTERFACE
 import { Usuario } from 'src/app/Interface/IUsuarios';
+
+//MATERIAL
+import { MatDialog } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { FormComponent } from '../form/form.component';
-import { MatIconModule } from '@angular/material/icon';
+
+//API´s
+import { MasterService } from 'src/app/shared/master.service';
 import { NgToastService } from 'ng-angular-popup';
 import { NgConfirmService } from 'ng-confirm-box';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios',
@@ -21,12 +26,15 @@ export class UsuariosComponent implements OnInit {
   Usuario!: Usuario;
   usuarioList!: any;
   dataSource: any;
-  displayedColumns: string[] = ["nome", "sobrenome", "pais", "email", "telefone", "excluir"];
+  displayedColumns: string[] = ["id","nome", "sobrenome", "pais", "email", "telefone", "excluir"];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private dialog: MatDialog,private router: Router , private service: MasterService, private toastService: NgToastService, private confirm: NgConfirmService) {
-    this.loadUsuario();
+  constructor(private dialog: MatDialog,private router: Router , private service: MasterService, 
+              private toastService: NgToastService, private confirm: NgConfirmService ) {
+
+      this.loadUsuario();
+  
   }
 
   ngOnInit(): void {

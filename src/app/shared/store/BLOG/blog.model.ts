@@ -1,4 +1,3 @@
-//ideia ricardinho das brackets
 export interface BlogModel {
     id: number,
     title :string,

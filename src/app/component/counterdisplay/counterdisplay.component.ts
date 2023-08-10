@@ -1,9 +1,18 @@
+//ANGULAR
 import { Component, OnDestroy, OnInit } from '@angular/core';
+
+//NGRX
 import { Store } from '@ngrx/store';
-import { CounterModel } from 'src/app/shared/store/counter.model';
+
+//RXJS
 import { Observable, Subscription } from 'rxjs';
+
+//SHARED COUNTER
 import { getcounter } from 'src/app/shared/store/counter.selector';
+
+//INTERFACES
 import { AppStateModel } from 'src/app/shared/store/GLOBAL/appstate.model';
+import { CounterModel } from 'src/app/shared/store/counter.model';
 
 @Component({
   selector: 'app-counterdisplay',

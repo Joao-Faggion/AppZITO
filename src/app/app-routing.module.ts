@@ -1,42 +1,29 @@
 import { NgModule } from '@angular/core';
+
+//AUTH
+import { authGuard } from './Guard/auth.guard';
+
+//ROUTER MODULES
 import { RouterModule, Routes } from '@angular/router';
+
+//COMPONENTS  
 import { HomeComponent } from './component/home/home.component';
 import { BlogComponent } from './component/blog/blog.component';
 import { ContadorComponent } from './component/contador/contador.component';
-import { authGuard } from './Guard/auth.guard';
 import { FormComponent } from './component/form/form.component';
 import { UsuariosComponent } from './component/usuarios/usuarios.component';
 import { DetalhesUsuariosComponent } from './component/detalhes-usuarios/detalhes-usuarios.component';
 
+
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'blog',
-    component: BlogComponent, canActivate:[authGuard]
-  },
-  {
-    path: 'contador',
-    component: ContadorComponent, canActivate:[authGuard]
-  },
-  {
-    path: 'formulario',
-    component: FormComponent
-  },
-  {
-    path: 'usuarios',
-    component: UsuariosComponent
-  },
-  {
-    path: 'detalhes/:id',
-    component: DetalhesUsuariosComponent
-  },
-  {
-    path: 'atualizar/:id',
-    component: FormComponent
-  },
+  
+  {  path: '', component: HomeComponent  },
+  {  path: 'blog', component: BlogComponent, canActivate:[authGuard]  },
+  {  path: 'contador', component: ContadorComponent, canActivate:[authGuard]  },
+  {  path: 'formulario', component: FormComponent  },
+  {  path: 'usuarios', component: UsuariosComponent  },
+  {  path: 'detalhes/:id', component: DetalhesUsuariosComponent  },
+  {  path: 'atualizar/:id', component: FormComponent  }
 ];
 
 @NgModule({

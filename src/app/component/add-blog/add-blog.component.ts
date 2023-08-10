@@ -1,13 +1,26 @@
+//ANGULAR
 import { Component, Inject, OnInit } from '@angular/core';
+
+//FORM
 import { FormBuilder, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+
+//NGRX
 import { Store } from '@ngrx/store';
+
+//MATERIAL
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+
+//INTERFACES
+import { BlogModel } from 'src/app/shared/store/BLOG/blog.model';
+import { AppStateModel } from 'src/app/shared/store/GLOBAL/appstate.model';
+
+//BLOG SHARED
+import { addBlog, updateBlog } from 'src/app/shared/store/BLOG/blog.actions';
+import { getblogbyid } from 'src/app/shared/store/BLOG/blog.selector';
+
+//API´s
 import { NgToastService } from 'ng-angular-popup';
 import { NgConfirmService } from 'ng-confirm-box';
-import { addBlog, updateBlog } from 'src/app/shared/store/BLOG/blog.actions';
-import { BlogModel } from 'src/app/shared/store/BLOG/blog.model';
-import { getblogbyid } from 'src/app/shared/store/BLOG/blog.selector';
-import { AppStateModel } from 'src/app/shared/store/GLOBAL/appstate.model';
 
 @Component({
   selector: 'app-add-blog',
@@ -20,12 +33,15 @@ export class AddBlogComponent implements OnInit {
   editblogid = 0;
   editdata!: BlogModel;
 
-  constructor(private dialogref: MatDialogRef<AddBlogComponent>, private builder: FormBuilder,
-    private store: Store<AppStateModel>, @Inject(MAT_DIALOG_DATA) public data: {
-      id: number,
-      title: string,
-      isedit: true
-    }, private toastService: NgToastService, private confirm: NgConfirmService) {
+  constructor(    private dialogref: MatDialogRef<AddBlogComponent>, 
+                  private builder: FormBuilder,
+                  private store: Store<AppStateModel>, 
+                  @Inject(MAT_DIALOG_DATA) public data: {
+                  id: number,
+                  title: string,
+                  isedit: true  }, 
+                  private toastService: NgToastService, 
+                  private confirm: NgConfirmService     ) {
 
   }
 

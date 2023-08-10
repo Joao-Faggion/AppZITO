@@ -9,6 +9,11 @@
     <mat-card-content>
 
         <table mat-table mat-sort [dataSource]="dataSource">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Código do Usuário </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
             <ng-container matColumnDef="nome">
                 <th mat-header-cell *matHeaderCellDef> Nome </th>
                 <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
